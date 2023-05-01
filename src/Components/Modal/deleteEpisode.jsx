@@ -61,7 +61,7 @@ const DeleteEpisode = (props) => {
     <div className="absolute text-white w-full h-full bg-zinc-900 z-10 top-20 flex justify-center backdrop:blur-lg bg-opacity-80">
       <div className='flex justify-center flex-col px-10 fixed rounded-2xl bg-black h-2/5 w-2/5'>
         <div className="flex justify-evenly ">
-          <h2 className="font-semibold mb-5 text-2xl text-white  ">Edit Episode</h2>
+          <h2 className="font-semibold mb-5 text-2xl text-white  ">Delete Episode</h2>
           <button onClick={() => modalDispatch({ type: 'CLOSE_AUTH_MODAL' })} className='text-4xl absolute top-5 right-16 text-red-700 font-bold'>x</button>
         </div>
         <div className='overflow-hidden px-20'>

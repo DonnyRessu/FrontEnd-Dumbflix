@@ -6,7 +6,6 @@ import { data } from 'autoprefixer';
 
 
 const AdminTransactions = () => {
-  const[colors, setColor]= useState("") 
   const [dropButton, setDropButton] = useState(false);
   const { data: transaction } = useQuery('transactionDetailCache', async () => {
     const response = await API.get(`/transactions`);
@@ -37,7 +36,7 @@ const AdminTransactions = () => {
                 <td>{trans?.user.fullname}</td>
                 <td>{trans?.endDate.slice(0,10)}</td>
                 <td>{trans?.user.subscribe ? "subscribe" : "not subscribe"}</td>
-                <td className={colors}>{<StatusPayment status={trans.status}/>}</td>
+                <td>{<StatusPayment status={trans.status}/>}</td>
                 <td className="relative">
                   <button className="pl-3" onClick={() => setDropButton(!dropButton)}>
                     <IoMdArrowDropdownCircle className="text-2xl text-sky-500" />
