@@ -3,6 +3,7 @@ import React, { useContext,} from 'react';
 import { UserContext } from '../../Context/UserContext'
 import { API } from '../../Config/Api';
 import { useMutation } from 'react-query';
+import Swal from 'sweetalert2';
 
 const   CardItem = (props) => {
   const [state] = useContext(UserContext)
@@ -11,7 +12,13 @@ const   CardItem = (props) => {
     try {
       console.log(movieId)
       await API.delete(`/film/${movieId}`);
-      alert("delete success")
+      // alert("delete success")
+      Swal.fire({
+        icon:'success',
+        title: 'DELETE SUCCESS !!',
+        showConfirmButton: false,
+        timer: 1500
+    })
       navigate('/');
     } catch (err) {
       console.log(err);
