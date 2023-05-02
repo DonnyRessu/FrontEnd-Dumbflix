@@ -78,14 +78,14 @@ const handleBuy = useMutation(async (e) => {
             <h3 className="font-bold text-md mb-5">Regular</h3>
             <p className="font-bold text-red-700 text-2xl mb-3">Rp 20K </p>
             <p className="text-justify">regular plan for a week, you can get access for limited thousand tv series and movies, auto renewal every week. cannot be cancel unless you close you're bank account.</p>
-            <button onClick={() => handleBuy.mutate({ price: 200000 })} className="bg-red-700 text-white mt-5 py-2 rounded-md">Buy plan</button>
+            <button onClick={() => handleBuy.mutate({ price: 20000 })} className="bg-red-700 text-white mt-5 py-2 rounded-md">Buy plan</button>
           </div>
 
           <div className="w-1/3 flex flex-col justify-between bg-zinc-800 shadow-md rounded-md p-3">
             <h3 className="font-bold text-md mb-5">premium</h3>
             <p className="font-bold text-red-700 text-2xl mb-3">Rp 50K </p>
             <p className="text-justify">Best plan for a month, you can get access for limited thousand tv series and movies, but you're account could get banned in less of a month and remember we're not giving any warranty.</p>
-            <button onClick={() => handleBuy.mutate({ price: 350000 })} className="bg-red-700 text-white mt-5 py-2 rounded-md">Buy plan</button>
+            <button onClick={() => handleBuy.mutate({ price: 50000 })} className="bg-red-700 text-white mt-5 py-2 rounded-md">Buy plan</button>
           </div>
 
           {/* <div className="w-1/3 flex flex-col justify-between bg-zinc-800 shadow-md rounded-md p-3">
